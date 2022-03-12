@@ -1,6 +1,7 @@
 import React, {Fragment, useContext, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {GithubContext} from "../context/github/githubContext";
+import {Repos} from "../components/Repos";
 
 export const Profile = ({match}) => {
   const {getUser, getRepos, loading, user, repos} = useContext(GithubContext)
@@ -62,16 +63,16 @@ export const Profile = ({match}) => {
                   blog && <li><strong>Сайт: </strong> {blog}</li>
                 }
               </ul>
-              <div className="badge badge-primary">Подписчики: {followers}</div>
-              <div className="badge badge-success">Подписан: {following}</div>
-              <div className="badge badge-info">Репозитории: {public_repos}</div>
-              <div className="badge badge-dark">Gists: {public_gists}</div>
+              <div className="badge bg-primary me-1">Подписчики: {followers}</div>
+              <div className="badge bg-success me-1">Подписан: {following}</div>
+              <div className="badge bg-info me-1">Репозитории: {public_repos}</div>
+              <div className="badge bg-dark me-1">Gists: {public_gists}</div>
             </div>
           </div>
         </div>
       </div>
 
-      {repos.join()}
+      <Repos repos={repos} />
     </Fragment>
   );
 };
