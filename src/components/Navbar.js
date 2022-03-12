@@ -9,7 +9,7 @@ export const Navbar = () => (
       </div>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link to="/" exact className="nav-link">Главная</Link>
+          <Link to="/" exact="true" className="nav-link">Главная</Link>
         </li>
         <li className="nav-item">
           <Link to="/about" className="nav-link">Информация</Link>
