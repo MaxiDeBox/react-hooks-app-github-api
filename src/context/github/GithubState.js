@@ -36,7 +36,7 @@ export const GithubState = ({children}) => {
     setLoading();
 
     // запрос на сервер
-    const response = await axios.get(withCreds(`https://api.github.com/users/${name}?`));
+    const response = await axios.get(`https://api.github.com/users/${name}`);
 
     dispatch({
       type: GET_USER,
@@ -48,7 +48,7 @@ export const GithubState = ({children}) => {
     setLoading();
 
     // запрос на сервер
-    const response = await axios.get(withCreds(`https://api.github.com/users/${name}/repos?per_page=10&`));
+    const response = await axios.get(`https://api.github.com/users/${name}/repos?per_page=10&`);
 
     dispatch({
       type: GET_REPOS,
