@@ -5,7 +5,7 @@ const handlers = {
   [GET_REPOS]: (state, {payload}) => ({...state, repos: payload, loading: false}),
   [GET_USER]: (state, {payload}) => ({...state, repos: payload, loading: false}),
   [SET_LOADING]: state => ({...state, loading: true}),
-  [CLEAR_USERS]: state => ({..state, users:[]}),
+  [CLEAR_USERS]: state => ({...state, users:[]}),
   DEFAULT: state => state,
 };
 
