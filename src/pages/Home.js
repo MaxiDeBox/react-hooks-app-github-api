@@ -1,18 +1,25 @@
 import React from "react";
+import {Search} from "../components/Search";
+import {Card} from "../components/Card";
 
 export const Home = () => {
+  const cards = new Array(15).fill('').map((_, idx) => idx);
   return (
-    <div className="row">
-      <div className="bg-dark text-light p-5">
-        <div className="container bg-dark p-5">
-          <h1 className="display-4">
-            Информация
-          </h1>
-          <p className="load">
-            Версия приложения: 1.0.0
-          </p>
-        </div>
+    <>
+      <div className="row">
+        <Search />
       </div>
-    </div>
-  )
+      <div className="row">
+        {
+          cards.map((card, idx) => {
+            return (
+              <div className="col-sm-4 mt-4" key={idx}>
+                <Card />
+              </div>
+            );
+          })
+        }
+      </div>
+    </>
+  );
 };
