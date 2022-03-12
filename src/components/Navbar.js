@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => (
-  <div className="row">
+  <div className="">
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="navbar-brand">
+      <div className="navbar-brand ps-2">
         Github Search
       </div>
       <ul className="navbar-nav">

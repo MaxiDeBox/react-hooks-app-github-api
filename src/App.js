@@ -12,8 +12,8 @@ import {Profile} from "./pages/Profile";
 function App() {
   return (
     <BrowserRouter>
-      <div className="container-fluid">
-        <Navbar />
+      <Navbar />
+      <div className="container">
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
